@@ -33,7 +33,6 @@ angular.module('locompleter', [])
             return directive;
 
             function link(scope, element) {
-
                 var autocomplete;
 
                 googleMaps.init(initialize);
@@ -48,8 +47,15 @@ angular.module('locompleter', [])
 
                     var address = getAddress(placeData.address_components);
 
-                    var addressArray = [address.streetNumber,
-                                        address.street,
+                    var addressline1;
+
+                    if (angular.isDefined(address.streetNumber)) {
+                        addressline1 = address.streetNumber + ' ' + address.street;
+                    } else {
+                        addressline1 = address.street;
+                    }
+
+                    var addressArray = [addressline1,
                                         address.town,
                                         address.city,
                                         address.county,
@@ -68,12 +74,10 @@ angular.module('locompleter', [])
                 };
 
                 function getAddress(components) {
-
                     var address = {};
 
                     //iterate over components and pull out the address details;
                     components.forEach(function (component) {
-
                         switch (component.types[0]) {
                             case "street_number":
                                 address.streetNumber = component.long_name;
@@ -96,10 +100,8 @@ angular.module('locompleter', [])
                             default:
                                 break;
                         }
-
                     });
                     return address;
                 }
-
             }
         }]);
