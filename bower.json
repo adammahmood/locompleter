@@ -1,10 +1,10 @@
 {
   "name": "locompleter",
   "main": "locompleter.js",
-  "version": "0.1.2",
-  "homepage": "https://github.com/gvn/locompleter",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mflerin/locompleter",
   "authors": [
-    "Gvn Lazar Suntop <gavin@gsuntop.com>"
+    "Marc Flerin"
   ],
   "description": "An Angular directive for Google Maps location autocompletion API.",
   "keywords": [
