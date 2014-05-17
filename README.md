@@ -4,6 +4,9 @@
 
 A modified version of: https://github.com/gvn/locompleter
 
+## Working example
+http://jsfiddle.net/mflerin/yy9hf/3/
+
 ## Usage
 
 Add an `autocomplete-location` attribute to any input element.
