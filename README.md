@@ -4,6 +4,10 @@
 
 A modified version of: https://github.com/gvn/locompleter
 
+## Install
+
+bower install mflerin-locompleter
+
 ## Working example
 http://jsfiddle.net/mflerin/yy9hf/3/
 
