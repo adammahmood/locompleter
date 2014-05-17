@@ -12,11 +12,15 @@ http://jsfiddle.net/mflerin/yy9hf/3/
 Add an `autocomplete-location` attribute to any input element.
 
 ```html
+ <script src="bower_components/mflerin-locompleter/locompleter.js"></script>
 <input autocomplete-location type="text">
 ```
 
 For location metadata listen for a `locationAutocompleted` event on the parent $scope.
 ```javascript
+//inject 'locompleter' into your main app.module
+
+//from within your controller use.
         $scope.$on('locationAutocompleted', function(scope,autocompleteData) {
             console.log(autocompleteData);
         });
