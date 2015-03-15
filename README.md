@@ -41,6 +41,8 @@ For location metadata listen for a `locationAutocompleted` event on the parent $
         postcode: "BD2 2EZ"
         street: "Robin Close"
         streetNumber: "22"
+	country: "United Kingdom"
+	countryCode: "GB"
     }
 
     fullAddress: "22, Robin Close, Bradford, West Yorkshire, BD2 2EZ"
