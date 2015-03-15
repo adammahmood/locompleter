@@ -94,6 +94,13 @@ angular.module('locompleter', [])
                             case "administrative_area_level_2":
                                 address.county = component.long_name;
                                 break;
+                            case "administrative_area_level_1":
+                                address.state = component.long_name;
+                                break;
+                            case "country":
+                                address.country = component.long_name;
+                                address.countryCode = component.short_name;
+                                break;
                             case "postal_code":
                                 address.postcode = component.long_name;
                                 break;
