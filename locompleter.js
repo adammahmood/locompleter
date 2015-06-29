@@ -44,18 +44,14 @@ angular.module('locompleter', [])
 
                 function onPlaceChanged() {
                     var placeData = autocomplete.getPlace();
-
                     var address = getAddress(placeData.address_components);
+                    var name;
 
-                    var addressline1;
-
-                    if (angular.isDefined(address.streetNumber)) {
-                        addressline1 = address.streetNumber + ' ' + address.street;
-                    } else {
-                        addressline1 = address.street;
+                    if (angular.isDefined(placeData.name)) {
+                        name = placeData.name;
                     }
 
-                    var addressArray = [addressline1,
+                    var addressArray = [name,
                                         address.town,
                                         address.city,
                                         address.county,
