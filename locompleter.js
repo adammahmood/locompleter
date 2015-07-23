@@ -52,10 +52,10 @@ angular.module('locompleter', [])
                     }
 
                     var addressArray = [name,
-                                        address.town,
-                                        address.city,
-                                        address.county,
-                                        address.postcode];
+                        address.town,
+                        address.city,
+                        address.county,
+                        address.postcode];
 
                     addressArray = addressArray.filter(function (item) {
                         return angular.isDefined(item);
@@ -65,7 +65,8 @@ angular.module('locompleter', [])
                         latitude: placeData.geometry.location.lat(),
                         longitude: placeData.geometry.location.lng(),
                         address: address,
-                        fullAddress: addressArray.join(', ')
+                        fullAddress: addressArray.join(', '),
+                        name : name
                     });
                 };
 
