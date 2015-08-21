@@ -79,6 +79,9 @@ angular.module('locompleter', [])
                             case "street_number":
                                 address.streetNumber = component.long_name;
                                 break;
+                            case "premise":
+                                address.streetNumber = component.long_name;
+                                break;
                             case "route":
                                 address.street = component.long_name;
                                 break;
@@ -86,6 +89,9 @@ angular.module('locompleter', [])
                                 address.town = component.long_name;
                                 break;
                             case "locality":
+                                address.city = component.long_name;
+                                break;
+                            case "postal_town":
                                 address.city = component.long_name;
                                 break;
                             case "administrative_area_level_2":
